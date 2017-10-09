@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import random
 import sys
+import os
 
 IMAGE = [
 '''
@@ -87,12 +88,18 @@ def run():
     hiddenWord = ['-'] * len(word)
     tries = 0
     while True:
+
         tableBoard(hiddenWord,tries)
         currentLetter = str(input('Ingresa una letra: '))
+        os.system('cls')
+        print('B I E N V E N I D O S  A L  A H O R C A D I T O')
+        print('')
         letterIndexes = []
+
         for i in range(len(word)):
             if word[i] == currentLetter:
                 letterIndexes.append(i)
+
         if len(letterIndexes) == 0:
             tries += 1
             if tries == (len(IMAGE) - 1):
@@ -104,6 +111,7 @@ def run():
             for idx in letterIndexes:
                 hiddenWord[idx] = currentLetter
         letterIndexes = []
+
         try:
             hiddenWord.index('-')
         except ValueError:
@@ -115,6 +123,7 @@ def run():
     if resp == 'y' or resp == 'yes' or resp == 'Y' or resp == 'Yes':
         run()
     else:
+        os.system('cls')
         sys.exit(0)
 
 
