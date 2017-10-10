@@ -13,7 +13,7 @@ def addLists():
     friendsGirls = ['Daniela','Angela','Nana']
     BoysGirls = friendsBoys + friendsGirls # Concatena 2 listas
     BoysGirls.remove('Brujo') # Borra un Elemento
-    del BoysGirls[0] #Borra un Elemento por su indice 
+    del BoysGirls[0] #Borra un Elemento por su indice
     print(BoysGirls)
 
 def run():
@@ -22,3 +22,4 @@ def run():
 
 if __name__ == '__main__':
     run()
+    # amigos.__dict__
